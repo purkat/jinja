@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>SmartNinja basic Jinja template</title>
+
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <h1>Hello, SmartNinja!</h1>
+
+    <img src="http://placehold.it/350x150">
+    {% if sporocilo %}
+        <p>Handler nam je sporočil naslednje: {{sporocilo}}</p>
+    {% else %}
+        <p>Od Handlerja nismo prejeli nobenega sporočila :( </p>
+    {% endif %}
+
+    <p>
+        <a href="/cas" class="btn btn-danger">Trenutni cas</a>
+    </p>
+    <p>
+        <a href="/en" class="btn btn-danger">en</a>
+        <a href="/si" class="btn btn-danger">si</a>
+    </p>
+    <form method="post" action="/cas">
+        <input name="moje_vnosno_polje">
+        <input name="a">
+        <input name="b">
+        <input name="c">
+        <button type="submit">Objavi</button>
+    </form>
+</body>
+</html>
