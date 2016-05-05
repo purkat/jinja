@@ -1,22 +1,13 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Moja spletna stran</title>
-        <meta charset="utf-8">
-    </head>
+{% extends "base.html" %}
 
-    <body>
-        <a href="/home">Domov</a> |
-        <a href="/about">O meni</a> |
-        <a href="/projekti">Moji projekti</a> |
-        <a href="/blog">Blog</a> |
-        <a href="/kontakt">Kontakt</a>
-        <a href="/">Page root</a>
+{% block title %}Moji projekti{% endblock title %}
 
-        <br>
-        <br>
-
-        <p>Projekt</p>
-
-    </body>
-</html>
+{% block specifika %}
+    <h1>Moji projekti</h1>
+    <p>Naredil sem naslednje projekte</p>
+    <ul>
+        <li>FakeBook</li>
+        <li>Boogle</li>
+        <li>Forenzični program</li>
+    </ul>
+{% endblock specifika %}
