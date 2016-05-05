@@ -46,6 +46,7 @@ class MainHandler(BaseHandler):
         self.render_template("hello.html", params=izhodni_podatki)
 
 
+
 class CasHandler(BaseHandler):
     def get(self):
         params = {"sporocilo": datetime.now()}
@@ -69,8 +70,33 @@ class EnHandler(BaseHandler):
         }
         self.render_template("jeziki.html", params=params)
 
+class HomeHandler(BaseHandler):
+    def get(self):
+        self.render_template("home.html")
+
+class AboutHandler(BaseHandler):
+    def get(self):
+        self.render_template("about.html")
+
+class ProjektiHandler(BaseHandler):
+    def get(self):
+        self.render_template("projekti.html")
+
+class BlogHandler(BaseHandler):
+    def get(self):
+        self.render_template("blog.html")
+
+class KontaktHandler(BaseHandler):
+    def get(self):
+        self.render_template("kontakt.html")
+
 app = webapp2.WSGIApplication([
     webapp2.Route('/', MainHandler),
+    webapp2.Route('/home', HomeHandler),
+    webapp2.Route('/about', AboutHandler),
+    webapp2.Route('/projekti', ProjektiHandler),
+    webapp2.Route('/blog', BlogHandler),
+    webapp2.Route('/kontakt', KontaktHandler),
     webapp2.Route('/cas', CasHandler),
     webapp2.Route('/si', SiHandler),
     webapp2.Route('/en', EnHandler)

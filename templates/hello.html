@@ -14,6 +14,9 @@
 <body>
     <h1>Hello, SmartNinja!</h1>
 
+    <p>
+        <a href="/home" class="btn btn-danger">Homepage</a>
+    </p>
     <img src="http://placehold.it/350x150">
     {% if sporocilo %}
         <p>Handler nam je sporočil naslednje: {{sporocilo}}</p>
@@ -28,7 +31,7 @@
         <a href="/en" class="btn btn-danger">en</a>
         <a href="/si" class="btn btn-danger">si</a>
     </p>
-    <form method="post" action="/cas">
+    <form method="post" action="/">
         <input name="moje_vnosno_polje">
         <input name="a">
         <input name="b">
